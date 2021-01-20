@@ -4,20 +4,20 @@
 
 DSBA student at [Florida Polytechnic University](https://www.floridapoly.edu) currently enrolled in: 
 
-- Course 1
+- Introduction To Data Science
 
-- Course 2
+- Operations Management
 
-- Course 3
+- Time Series Modeling and Forecasting
 
-- Course 4
+- Economic Analysis for Technologists
 
 **Hobbies:**
 
 I am _passionate about_: 
 
-- Thing 1
+- Learning
 
-- Thing 2
+- Meeting and working with new people
 
-- Thing 3 as shown in this website <https://www.floridapoly.edu>
+- Applying data science
