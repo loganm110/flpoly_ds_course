@@ -22,8 +22,7 @@ a. Make sure your GitHub repo (`flpoly_ds_course/`) shows the results of your up
 b. Include a [link to your GitHub repo](https://github.com/loganm110/flpoly_ds_course) in this document.
 
 c. Take a screenshot of the GitHub repo, add the screenshot file to the repo, and include it in this document (review how to insert a picture using markdown)
-**Screenshot of This GitHub Repo**
-![](C:/Users\lmm56\Documents\School\Poly_20-21\Spring 21\COP 2073\practice2021\flpoly_ds_course\GitHub_MainPageScreenshot.png)
+![**Screenshot of This GitHub Repo**](C:/Users\lmm56\Documents\School\Poly_20-21\Spring 21\COP 2073\practice2021\flpoly_ds_course\GitHub_MainPageScreenshot.png)
 
 
 # Problem 2 (30 points)
