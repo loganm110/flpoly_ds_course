@@ -1780,23 +1780,121 @@ summary {
 <div id="problem-2-30-points" class="section level1">
 <h1>Problem 2 (30 points)</h1>
 <p>For this problem, you are asked to create a list of <strong>3 concepts</strong> you have learned about so far this semester, for at least 2 of the courses you are currently taking. Include the name of the course as a sub-heading (that is, using <code>##</code>), and the concepts as an unordered list. Include a link to information about at least one of the concept you listed (for example a link to the Wikipedia page about that concept/topics).</p>
-<p><em>Edit this <code>.Rmd</code> file to include the solutions here.</em></p>
+<div id="economic-analysis-for-technologists" class="section level2">
+<h2>Economic Analysis For Technologists</h2>
+<ul>
+<li>Value of Information</li>
+<li><a href="https://en.wikipedia.org/wiki/Price_discrimination#Third_degree">Simple (3rd degree) Price Discrimination</a></li>
+<li>Peak Poad Pricing</li>
+</ul>
+</div>
+<div id="time-series-modeling-and-forecasting" class="section level2">
+<h2>Time Series Modeling and Forecasting</h2>
+<ul>
+<li>Joint Hypothesis Tests</li>
+<li>Finite Distributed Lag Models</li>
+<li>Stationarity</li>
+</ul>
+</div>
 </div>
 <div id="problem-3-40-points" class="section level1">
 <h1>Problem 3 (40 points)</h1>
 <p>In this problem you will practice some basic R operations. Include solutions to each items by inserting a new R chunk of code (make sure you run the chunk so that the output is displayed)</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Create a variable called <code>my_name</code> that contains your preferred name.</p></li>
-<li><p>Create a variable called <code>name_length</code> that holds how many letters are in <code>my_name</code>.</p></li>
-<li><p>Show which value is bigger: <span class="math inline">\(e^\pi\)</span> or <span class="math inline">\(\pi^e\)</span>.</p></li>
-<li><p>Define a function called <code>add_tree</code> that takes a single argument and returns a value 3 times larger than the input.</p></li>
-<li><p>Use the colon operator <code>:</code> to create a vector <code>v</code> of numbers from 10 to 49. Find the length of this vector using the <code>length()</code> function.</p></li>
-<li><p>Use the <code>seq()</code> function to produce a range of number from -5 to 10 in 0.5 increments.</p></li>
+<li>Create a variable called <code>my_name</code> that contains your preferred name.</li>
 </ol>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfbmFtZSA8LSBcIkxvZ2FuXCJcbmBgYCJ9 -->
+<pre class="r"><code>my_name &lt;- &quot;Logan&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Create a variable called <code>name_length</code> that holds how many letters are in <code>my_name</code>.</li>
+</ol>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZV9sZW5ndGggPC0gbmNoYXIobXlfbmFtZSlcbmBgYCJ9 -->
+<pre class="r"><code>name_length &lt;- nchar(my_name)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Show which value is bigger: <span class="math inline">\(e^\pi\)</span> or <span class="math inline">\(\pi^e\)</span>.</li>
+</ol>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnVtXzEgPC0gZXhwKDEpXnBpXG5udW1fMiA8LSBwaV5leHAoMSlcblxuaXNfYmlnZ2VyIDwtIGZ1bmN0aW9uKG51bTEsIG51bTIpIHtcbiBpZihudW0xPm51bTIpIHtcbiAgIHByaW50KCdlXnBpIGlzIGdyZWF0ZXInKVxuIH0gZWxzZSB7XG4gICBwcmludCgncGleZSBpcyBncmVhdGVyJylcbiB9XG59XG5cbmlzX2JpZ2dlcihudW1fMSwgbnVtXzIpXG5gYGAifQ== -->
+<pre class="r"><code>num_1 &lt;- exp(1)^pi
+num_2 &lt;- pi^exp(1)
+
+is_bigger &lt;- function(num1, num2) {
+ if(num1&gt;num2) {
+   print(&#39;e^pi is greater&#39;)
+ } else {
+   print(&#39;pi^e is greater&#39;)
+ }
+}
+
+is_bigger(num_1, num_2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZV5waSBpcyBncmVhdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;e^pi is greater&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Define a function called <code>add_tree</code> that takes a single argument and returns a value 3 times larger than the input.</li>
+</ol>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWRkX3RyZWUgPC0gZnVuY3Rpb24obnVtYmVyKSB7XG4gIHByaW50KG51bWJlciAqIDMpXG59XG5cbmFkZF90cmVlKDkpXG5gYGAifQ== -->
+<pre class="r"><code>add_tree &lt;- function(number) {
+  print(number * 3)
+}
+
+add_tree(9)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDI3XG4ifQ== -->
+<pre><code>[1] 27</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Use the colon operator <code>:</code> to create a vector <code>v</code> of numbers from 10 to 49. Find the length of this vector using the <code>length()</code> function.</li>
+</ol>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudiA8LSBjKDEwOjQ5KVxuXG5sZW5ndGgodilcbmBgYCJ9 -->
+<pre class="r"><code>v &lt;- c(10:49)
+
+length(v)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQwXG4ifQ== -->
+<pre><code>[1] 40</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Use the <code>seq()</code> function to produce a range of number from -5 to 10 in 0.5 increments.</li>
+</ol>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudjIgPC0gc2VxKC01LCAxMCwgYnkgPSAwLjUpXG5wcmludCh2MilcbmBgYCJ9 -->
+<pre class="r"><code>v2 &lt;- seq(-5, 10, by = 0.5)
+print(v2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAtNS4wIC00LjUgLTQuMCAtMy41IC0zLjAgLTIuNSAtMi4wIC0xLjUgLTEuMCAtMC41ICAwLjAgIDAuNSAgMS4wICAxLjUgIDIuMCAgMi41ICAzLjAgIDMuNSAgNC4wICA0LjUgIDUuMFxuWzIyXSAgNS41ICA2LjAgIDYuNSAgNy4wICA3LjUgIDguMCAgOC41ICA5LjAgIDkuNSAxMC4wXG4ifQ== -->
+<pre><code> [1] -5.0 -4.5 -4.0 -3.5 -3.0 -2.5 -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5  4.0  4.5  5.0
+[22]  5.5  6.0  6.5  7.0  7.5  8.0  8.5  9.0  9.5 10.0</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkludHJvZHVjdGlvbiB0byBEYXRhIFNjaWVuY2UgLSBIVyAyIg0KYXV0aG9yOiAiTG9nYW4gTWlsbGVyIC0gYGxtaWxsZXI1OTUzQGZsb3JpZGFwb2x5LmVkdWAiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCg0KIyBQcm9ibGVtIDEgKDMwIHBvaW50cykNCg0KRHVyaW5nIGNsYXNzIHlvdSBjb21wbGV0ZWQgYW4gYWN0aXZpdHkgaW4gd2hpY2ggeW91IHByYWN0aWNlZCBgZ2l0YCBjb21tYW5kcyBhbmQgb3BlcmF0aW9ucyAoc3VjaCBhcyBmb3JraW5nIGEgcmVwb3NpdG9yeSwgY2xvbmluZyBpdCB1c2luZyBgZ2l0IGNsb25lYCwgYW5kIHVwbG9hZGluZyBjaGFuZ2VzIHVzaW5nIGBnaXQgcHVzaGApLg0KDQpJbiB0aGlzIGV4ZXJjaXNlIHlvdSBhcmUgYXNrZWQgdG8gbW9kaWZ5IHRoZSBgZmxwb2x5X3N0dWRlbnQubWRgIGZpbGUgeW91IHdvcmtlZCBkdXJpbmcgY2xhc3MsIGFuZCBmb3JtYXQgaXQgdXNpbmcgdGhlICoqbWFya2Rvd24qKiB0b29scyBkaXNjdXNzZWQgaW4gY2xhc3MuIFlvdSBtdXN0ICoqY3JlYXRlIGEgdGFibGUqKiB0aGF0IHNob3dzIHRoZSBjb3Vyc2VzIHlvdSBhcmUgY3VycmVudGx5IGVucm9sbGVkIGluLCB1c2luZyBmb3IgdGhlIGhlYWRlcnMgb2YgdGhlIHRhYmxlOiANCg0KLSBQcmVmaXg6IGluIGJvbGQgbGV0dGVycyAoc3VjaCBhcyAqKkNPUCoqKQ0KLSBOdW1iZXI6IGluIGJvbGQgbGV0dGVycyAoc3VjaCBhcyAqKjIwNzMqKikNCi0gTmFtZTogaW4gaXRhbGljcyAoc3VjaCBhcyBfSW50cm9kdWN0aW9uIHRvIERhdGEgU2NpZW5jZV8pDQotIENyZWRpdHMgKHN1Y2ggYXMgMykNCg0KYS4gTWFrZSBzdXJlIHlvdXIgR2l0SHViIHJlcG8gKGBmbHBvbHlfZHNfY291cnNlL2ApIHNob3dzIHRoZSByZXN1bHRzIG9mIHlvdXIgdXBkYXRlZCBmaWxlIChyZW1lbWJlciB0byB1c2UgdGhlIGNvbW1hbmRzIGBnaXQgYWRkIC5gICwgYGdpdCBjb21taXQgLW0gIllPVVIgTUVTU0FHRSJgLCBhbmQgYGdpdCBwdXNoYCkgDQoNCmIuIEluY2x1ZGUgYSBbbGluayB0byB5b3VyIEdpdEh1YiByZXBvXShodHRwczovL2dpdGh1Yi5jb20vbG9nYW5tMTEwL2ZscG9seV9kc19jb3Vyc2UpIGluIHRoaXMgZG9jdW1lbnQuDQoNCmMuIFRha2UgYSBzY3JlZW5zaG90IG9mIHRoZSBHaXRIdWIgcmVwbywgYWRkIHRoZSBzY3JlZW5zaG90IGZpbGUgdG8gdGhlIHJlcG8sIGFuZCBpbmNsdWRlIGl0IGluIHRoaXMgZG9jdW1lbnQgKHJldmlldyBob3cgdG8gaW5zZXJ0IGEgcGljdHVyZSB1c2luZyBtYXJrZG93bikNCioqU2NyZWVuc2hvdCBvZiBUaGlzIEdpdEh1YiBSZXBvKioNCiFbXShDOi9Vc2Vyc1xsbW01NlxEb2N1bWVudHNcU2Nob29sXFBvbHlfMjAtMjFcU3ByaW5nIDIxXENPUCAyMDczXHByYWN0aWNlMjAyMVxmbHBvbHlfZHNfY291cnNlXEdpdEh1Yl9NYWluUGFnZVNjcmVlbnNob3QucG5nKQ0KDQoNCiMgUHJvYmxlbSAyICgzMCBwb2ludHMpDQoNCkZvciB0aGlzIHByb2JsZW0sIHlvdSBhcmUgYXNrZWQgdG8gY3JlYXRlIGEgbGlzdCBvZiAqKjMgY29uY2VwdHMqKiB5b3UgaGF2ZSBsZWFybmVkIGFib3V0IHNvIGZhciB0aGlzIHNlbWVzdGVyLCBmb3IgYXQgbGVhc3QgMiBvZiB0aGUgY291cnNlcyB5b3UgYXJlIGN1cnJlbnRseSB0YWtpbmcuIEluY2x1ZGUgdGhlIG5hbWUgb2YgdGhlIGNvdXJzZSBhcyBhIHN1Yi1oZWFkaW5nICh0aGF0IGlzLCB1c2luZyBgIyNgKSwgYW5kIHRoZSBjb25jZXB0cyBhcyBhbiB1bm9yZGVyZWQgbGlzdC4gSW5jbHVkZSBhIGxpbmsgdG8gaW5mb3JtYXRpb24gYWJvdXQgYXQgbGVhc3Qgb25lIG9mIHRoZSBjb25jZXB0IHlvdSBsaXN0ZWQgKGZvciBleGFtcGxlIGEgbGluayB0byB0aGUgV2lraXBlZGlhIHBhZ2UgYWJvdXQgdGhhdCBjb25jZXB0L3RvcGljcykuDQoNCl9FZGl0IHRoaXMgYC5SbWRgIGZpbGUgdG8gaW5jbHVkZSB0aGUgc29sdXRpb25zIGhlcmUuXw0KDQoNCg0KIyBQcm9ibGVtIDMgKDQwIHBvaW50cykNCg0KSW4gdGhpcyBwcm9ibGVtIHlvdSB3aWxsIHByYWN0aWNlIHNvbWUgYmFzaWMgUiBvcGVyYXRpb25zLiBJbmNsdWRlIHNvbHV0aW9ucyB0byBlYWNoIGl0ZW1zIGJ5IGluc2VydGluZyBhIG5ldyBSIGNodW5rIG9mIGNvZGUgKG1ha2Ugc3VyZSB5b3UgcnVuIHRoZSBjaHVuayBzbyB0aGF0IHRoZSBvdXRwdXQgaXMgZGlzcGxheWVkKQ0KDQooYSkgQ3JlYXRlIGEgdmFyaWFibGUgY2FsbGVkIGBteV9uYW1lYCB0aGF0IGNvbnRhaW5zIHlvdXIgcHJlZmVycmVkIG5hbWUuDQoNCihiKSBDcmVhdGUgYSB2YXJpYWJsZSBjYWxsZWQgYG5hbWVfbGVuZ3RoYCB0aGF0IGhvbGRzIGhvdyBtYW55IGxldHRlcnMgYXJlIGluIGBteV9uYW1lYC4NCg0KKGMpIFNob3cgd2hpY2ggdmFsdWUgaXMgYmlnZ2VyOiAkZV5ccGkkIG9yICRccGleZSQuIA0KDQooZCkgRGVmaW5lIGEgZnVuY3Rpb24gY2FsbGVkIGBhZGRfdHJlZWAgdGhhdCB0YWtlcyBhIHNpbmdsZSBhcmd1bWVudCBhbmQgcmV0dXJucyBhIHZhbHVlIDMgdGltZXMgbGFyZ2VyIHRoYW4gdGhlIGlucHV0Lg0KDQooZSkgVXNlIHRoZSBjb2xvbiBvcGVyYXRvciBgOmAgdG8gY3JlYXRlIGEgdmVjdG9yIGB2YCBvZiBudW1iZXJzIGZyb20gMTAgdG8gNDkuIEZpbmQgdGhlIGxlbmd0aCBvZiB0aGlzIHZlY3RvciB1c2luZyB0aGUgYGxlbmd0aCgpYCBmdW5jdGlvbi4NCg0KKGYpIFVzZSB0aGUgYHNlcSgpYCBmdW5jdGlvbiB0byBwcm9kdWNlIGEgcmFuZ2Ugb2YgbnVtYmVyIGZyb20gLTUgdG8gMTAgaW4gMC41IGluY3JlbWVudHMuDQoNCg0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkludHJvZHVjdGlvbiB0byBEYXRhIFNjaWVuY2UgLSBIVyAyIg0KYXV0aG9yOiAiTG9nYW4gTWlsbGVyIC0gYGxtaWxsZXI1OTUzQGZsb3JpZGFwb2x5LmVkdWAiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCg0KIyBQcm9ibGVtIDEgKDMwIHBvaW50cykNCg0KRHVyaW5nIGNsYXNzIHlvdSBjb21wbGV0ZWQgYW4gYWN0aXZpdHkgaW4gd2hpY2ggeW91IHByYWN0aWNlZCBgZ2l0YCBjb21tYW5kcyBhbmQgb3BlcmF0aW9ucyAoc3VjaCBhcyBmb3JraW5nIGEgcmVwb3NpdG9yeSwgY2xvbmluZyBpdCB1c2luZyBgZ2l0IGNsb25lYCwgYW5kIHVwbG9hZGluZyBjaGFuZ2VzIHVzaW5nIGBnaXQgcHVzaGApLg0KDQpJbiB0aGlzIGV4ZXJjaXNlIHlvdSBhcmUgYXNrZWQgdG8gbW9kaWZ5IHRoZSBgZmxwb2x5X3N0dWRlbnQubWRgIGZpbGUgeW91IHdvcmtlZCBkdXJpbmcgY2xhc3MsIGFuZCBmb3JtYXQgaXQgdXNpbmcgdGhlICoqbWFya2Rvd24qKiB0b29scyBkaXNjdXNzZWQgaW4gY2xhc3MuIFlvdSBtdXN0ICoqY3JlYXRlIGEgdGFibGUqKiB0aGF0IHNob3dzIHRoZSBjb3Vyc2VzIHlvdSBhcmUgY3VycmVudGx5IGVucm9sbGVkIGluLCB1c2luZyBmb3IgdGhlIGhlYWRlcnMgb2YgdGhlIHRhYmxlOiANCg0KLSBQcmVmaXg6IGluIGJvbGQgbGV0dGVycyAoc3VjaCBhcyAqKkNPUCoqKQ0KLSBOdW1iZXI6IGluIGJvbGQgbGV0dGVycyAoc3VjaCBhcyAqKjIwNzMqKikNCi0gTmFtZTogaW4gaXRhbGljcyAoc3VjaCBhcyBfSW50cm9kdWN0aW9uIHRvIERhdGEgU2NpZW5jZV8pDQotIENyZWRpdHMgKHN1Y2ggYXMgMykNCg0KYS4gTWFrZSBzdXJlIHlvdXIgR2l0SHViIHJlcG8gKGBmbHBvbHlfZHNfY291cnNlL2ApIHNob3dzIHRoZSByZXN1bHRzIG9mIHlvdXIgdXBkYXRlZCBmaWxlIChyZW1lbWJlciB0byB1c2UgdGhlIGNvbW1hbmRzIGBnaXQgYWRkIC5gICwgYGdpdCBjb21taXQgLW0gIllPVVIgTUVTU0FHRSJgLCBhbmQgYGdpdCBwdXNoYCkgDQoNCmIuIEluY2x1ZGUgYSBbbGluayB0byB5b3VyIEdpdEh1YiByZXBvXShodHRwczovL2dpdGh1Yi5jb20vbG9nYW5tMTEwL2ZscG9seV9kc19jb3Vyc2UpIGluIHRoaXMgZG9jdW1lbnQuDQoNCmMuIFRha2UgYSBzY3JlZW5zaG90IG9mIHRoZSBHaXRIdWIgcmVwbywgYWRkIHRoZSBzY3JlZW5zaG90IGZpbGUgdG8gdGhlIHJlcG8sIGFuZCBpbmNsdWRlIGl0IGluIHRoaXMgZG9jdW1lbnQgKHJldmlldyBob3cgdG8gaW5zZXJ0IGEgcGljdHVyZSB1c2luZyBtYXJrZG93bikNCioqU2NyZWVuc2hvdCBvZiBUaGlzIEdpdEh1YiBSZXBvKioNCiFbXShDOi9Vc2Vyc1xsbW01NlxEb2N1bWVudHNcU2Nob29sXFBvbHlfMjAtMjFcU3ByaW5nIDIxXENPUCAyMDczXHByYWN0aWNlMjAyMVxmbHBvbHlfZHNfY291cnNlXEdpdEh1Yl9NYWluUGFnZVNjcmVlbnNob3QucG5nKQ0KDQoNCiMgUHJvYmxlbSAyICgzMCBwb2ludHMpDQoNCkZvciB0aGlzIHByb2JsZW0sIHlvdSBhcmUgYXNrZWQgdG8gY3JlYXRlIGEgbGlzdCBvZiAqKjMgY29uY2VwdHMqKiB5b3UgaGF2ZSBsZWFybmVkIGFib3V0IHNvIGZhciB0aGlzIHNlbWVzdGVyLCBmb3IgYXQgbGVhc3QgMiBvZiB0aGUgY291cnNlcyB5b3UgYXJlIGN1cnJlbnRseSB0YWtpbmcuIEluY2x1ZGUgdGhlIG5hbWUgb2YgdGhlIGNvdXJzZSBhcyBhIHN1Yi1oZWFkaW5nICh0aGF0IGlzLCB1c2luZyBgIyNgKSwgYW5kIHRoZSBjb25jZXB0cyBhcyBhbiB1bm9yZGVyZWQgbGlzdC4gSW5jbHVkZSBhIGxpbmsgdG8gaW5mb3JtYXRpb24gYWJvdXQgYXQgbGVhc3Qgb25lIG9mIHRoZSBjb25jZXB0IHlvdSBsaXN0ZWQgKGZvciBleGFtcGxlIGEgbGluayB0byB0aGUgV2lraXBlZGlhIHBhZ2UgYWJvdXQgdGhhdCBjb25jZXB0L3RvcGljcykuDQoNCiMjIEVjb25vbWljIEFuYWx5c2lzIEZvciBUZWNobm9sb2dpc3RzDQotIFZhbHVlIG9mIEluZm9ybWF0aW9uDQotIFtTaW1wbGUgKDNyZCBkZWdyZWUpIFByaWNlIERpc2NyaW1pbmF0aW9uXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9QcmljZV9kaXNjcmltaW5hdGlvbiNUaGlyZF9kZWdyZWUpDQotIFBlYWsgUG9hZCBQcmljaW5nDQoNCiMjIFRpbWUgU2VyaWVzIE1vZGVsaW5nIGFuZCBGb3JlY2FzdGluZw0KLSBKb2ludCBIeXBvdGhlc2lzIFRlc3RzDQotIEZpbml0ZSBEaXN0cmlidXRlZCBMYWcgTW9kZWxzDQotIFN0YXRpb25hcml0eQ0KDQojIFByb2JsZW0gMyAoNDAgcG9pbnRzKQ0KDQpJbiB0aGlzIHByb2JsZW0geW91IHdpbGwgcHJhY3RpY2Ugc29tZSBiYXNpYyBSIG9wZXJhdGlvbnMuIEluY2x1ZGUgc29sdXRpb25zIHRvIGVhY2ggaXRlbXMgYnkgaW5zZXJ0aW5nIGEgbmV3IFIgY2h1bmsgb2YgY29kZSAobWFrZSBzdXJlIHlvdSBydW4gdGhlIGNodW5rIHNvIHRoYXQgdGhlIG91dHB1dCBpcyBkaXNwbGF5ZWQpDQoNCihhKSBDcmVhdGUgYSB2YXJpYWJsZSBjYWxsZWQgYG15X25hbWVgIHRoYXQgY29udGFpbnMgeW91ciBwcmVmZXJyZWQgbmFtZS4NCmBgYHtyfQ0KbXlfbmFtZSA8LSAiTG9nYW4iDQpgYGANCg0KKGIpIENyZWF0ZSBhIHZhcmlhYmxlIGNhbGxlZCBgbmFtZV9sZW5ndGhgIHRoYXQgaG9sZHMgaG93IG1hbnkgbGV0dGVycyBhcmUgaW4gYG15X25hbWVgLg0KYGBge3J9DQpuYW1lX2xlbmd0aCA8LSBuY2hhcihteV9uYW1lKQ0KYGBgDQoNCihjKSBTaG93IHdoaWNoIHZhbHVlIGlzIGJpZ2dlcjogJGVeXHBpJCBvciAkXHBpXmUkLg0KYGBge3J9DQpudW1fMSA8LSBleHAoMSlecGkNCm51bV8yIDwtIHBpXmV4cCgxKQ0KDQppc19iaWdnZXIgPC0gZnVuY3Rpb24obnVtMSwgbnVtMikgew0KIGlmKG51bTE+bnVtMikgew0KICAgcHJpbnQoJ2VecGkgaXMgZ3JlYXRlcicpDQogfSBlbHNlIHsNCiAgIHByaW50KCdwaV5lIGlzIGdyZWF0ZXInKQ0KIH0NCn0NCg0KaXNfYmlnZ2VyKG51bV8xLCBudW1fMikNCg0KYGBgDQoNCihkKSBEZWZpbmUgYSBmdW5jdGlvbiBjYWxsZWQgYGFkZF90cmVlYCB0aGF0IHRha2VzIGEgc2luZ2xlIGFyZ3VtZW50IGFuZCByZXR1cm5zIGEgdmFsdWUgMyB0aW1lcyBsYXJnZXIgdGhhbiB0aGUgaW5wdXQuDQpgYGB7cn0NCmFkZF90cmVlIDwtIGZ1bmN0aW9uKG51bWJlcikgew0KICBwcmludChudW1iZXIgKiAzKQ0KfQ0KDQphZGRfdHJlZSg5KQ0KYGBgDQoNCg0KKGUpIFVzZSB0aGUgY29sb24gb3BlcmF0b3IgYDpgIHRvIGNyZWF0ZSBhIHZlY3RvciBgdmAgb2YgbnVtYmVycyBmcm9tIDEwIHRvIDQ5LiBGaW5kIHRoZSBsZW5ndGggb2YgdGhpcyB2ZWN0b3IgdXNpbmcgdGhlIGBsZW5ndGgoKWAgZnVuY3Rpb24uDQpgYGB7cn0NCnYgPC0gYygxMDo0OSkNCg0KbGVuZ3RoKHYpDQpgYGANCg0KDQooZikgVXNlIHRoZSBgc2VxKClgIGZ1bmN0aW9uIHRvIHByb2R1Y2UgYSByYW5nZSBvZiBudW1iZXIgZnJvbSAtNSB0byAxMCBpbiAwLjUgaW5jcmVtZW50cy4NCmBgYHtyfQ0KdjIgPC0gc2VxKC01LCAxMCwgYnkgPSAwLjUpDQpwcmludCh2MikNCmBgYA0KDQoNCg0K</div>
 
 
 

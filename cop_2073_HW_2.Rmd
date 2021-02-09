@@ -30,25 +30,70 @@ c. Take a screenshot of the GitHub repo, add the screenshot file to the repo, an
 
 For this problem, you are asked to create a list of **3 concepts** you have learned about so far this semester, for at least 2 of the courses you are currently taking. Include the name of the course as a sub-heading (that is, using `##`), and the concepts as an unordered list. Include a link to information about at least one of the concept you listed (for example a link to the Wikipedia page about that concept/topics).
 
-_Edit this `.Rmd` file to include the solutions here._
+## Economic Analysis For Technologists
+- Value of Information
+- [Simple (3rd degree) Price Discrimination](https://en.wikipedia.org/wiki/Price_discrimination#Third_degree)
+- Peak Poad Pricing
 
-
+## Time Series Modeling and Forecasting
+- Joint Hypothesis Tests
+- Finite Distributed Lag Models
+- Stationarity
 
 # Problem 3 (40 points)
 
 In this problem you will practice some basic R operations. Include solutions to each items by inserting a new R chunk of code (make sure you run the chunk so that the output is displayed)
 
 (a) Create a variable called `my_name` that contains your preferred name.
+```{r}
+my_name <- "Logan"
+```
 
 (b) Create a variable called `name_length` that holds how many letters are in `my_name`.
+```{r}
+name_length <- nchar(my_name)
+```
 
-(c) Show which value is bigger: $e^\pi$ or $\pi^e$. 
+(c) Show which value is bigger: $e^\pi$ or $\pi^e$.
+```{r}
+num_1 <- exp(1)^pi
+num_2 <- pi^exp(1)
+
+is_bigger <- function(num1, num2) {
+ if(num1>num2) {
+   print('e^pi is greater')
+ } else {
+   print('pi^e is greater')
+ }
+}
+
+is_bigger(num_1, num_2)
+
+```
 
 (d) Define a function called `add_tree` that takes a single argument and returns a value 3 times larger than the input.
+```{r}
+add_tree <- function(number) {
+  print(number * 3)
+}
+
+add_tree(9)
+```
+
 
 (e) Use the colon operator `:` to create a vector `v` of numbers from 10 to 49. Find the length of this vector using the `length()` function.
+```{r}
+v <- c(10:49)
+
+length(v)
+```
+
 
 (f) Use the `seq()` function to produce a range of number from -5 to 10 in 0.5 increments.
+```{r}
+v2 <- seq(-5, 10, by = 0.5)
+print(v2)
+```
 
 
 
