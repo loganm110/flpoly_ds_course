@@ -4,13 +4,12 @@
 
 DSBA student at [Florida Polytechnic University](https://www.floridapoly.edu) currently enrolled in: 
 
-- Introduction To Data Science
-
-- Operations Management
-
-- Time Series Modeling and Forecasting
-
-- Economic Analysis for Technologists
+| Prefix   | Number   | Name                                 |  Credits  |
+| :-------:| :------: | :----------------------------------: | :-------: |
+| COP      | 2073     | Introduction To Data Science         | 3         |
+| ECP      | 4044     | Economic Analysis For Technologists  | 3         |
+| EGN      | 3448     | Operations Management                | 3         |
+| CAP      | 4763     | Time Series Modeling and Forecasting | 3         |
 
 **Hobbies:**
 
